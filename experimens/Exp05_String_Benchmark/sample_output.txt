@@ -1,0 +1,16 @@
+$ bash string_ops.sh "Hello World" 6 5
+String: Hello World
+Length: 11
+Substring: World
+
+$ gcc string_ops.c -o string_ops
+$ ./string_ops "Hello World" 6 5
+String: Hello World
+Length: 11
+Substring: World
+
+Benchmark (times vary):
+$ time bash string_ops.sh "Hello World" 6 5
+real 0m0.00s
+user 0m0.00s
+sys  0m0.00s

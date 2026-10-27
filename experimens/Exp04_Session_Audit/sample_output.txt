@@ -1,0 +1,6 @@
+$ bash display_range.sh sample.txt 2 3
+remove this word from here
+third line
+
+$ bash delete_word.sh word sample.txt
+Removed 'word' from sample.txt (backup: sample.txt.bak)

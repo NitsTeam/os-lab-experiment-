@@ -1,0 +1,14 @@
+$ printf 'hello OS\n' > notes.txt
+$ mkdir -p testdir
+$ bash check_type.sh notes.txt testdir missing.txt
+FILE: notes.txt
+Size: 8 bytes
+DIRECTORY: testdir
+[ls -lah listing for testdir]
+NOT FOUND or unsupported file type: missing.txt
+
+$ touch report.txt
+$ bash rename_upper.sh report.txt
+renamed 'report.txt' -> 'REPORT.TXT'
+$ bash rename_upper.sh REPORT.TXT
+Already uppercase: REPORT.TXT

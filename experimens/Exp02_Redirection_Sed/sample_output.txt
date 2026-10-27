@@ -1,0 +1,43 @@
+$ bash experiment2.sh
+Current date/time:
+[system date and time]
+
+Logged-in users are being saved to logged_users.txt
+[logged-in session rows; may be empty]
+
+Print line 2:
+Linux is useful.
+
+Print lines 2 through 3:
+Linux is useful.
+Shell scripts save time.
+
+Delete first line from output:
+Linux is useful.
+Shell scripts save time.
+A quick brown fox jumps.
+
+Replace first Linux occurrence per line:
+UNIX is powerful.
+UNIX is useful.
+Shell scripts save time.
+A quick brown fox jumps.
+
+Replace every occurrence globally:
+Linux IS powerful.
+Linux IS useful.
+Shell scripts save time.
+A quick brown fox jumps.
+
+Lines beginning with Linux:
+Linux is powerful.
+Linux is useful.
+
+Lines ending with time.
+Shell scripts save time.
+
+Updated sample.txt (backup: sample.txt.bak):
+Linux is portable.
+Linux is useful.
+Shell scripts save time.
+A quick brown fox jumps.

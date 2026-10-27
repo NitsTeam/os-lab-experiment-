@@ -1,0 +1,12 @@
+Sample demonstration (exact output varies):
+$ pwd
+/home/student/OS-Lab-Experiments/Exp01_Linux_Basics
+$ printf "pear\napple\npear\n" | sort | uniq
+apple
+pear
+$ printf "one\ntwo\n" | tee stream.txt
+one
+two
+$ cat -n stream.txt
+     1  one
+     2  two

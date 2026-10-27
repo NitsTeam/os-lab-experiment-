@@ -1,0 +1,14 @@
+Terminal 1:
+$ gcc memory.c -o memory
+$ ./memory 100
+PID: 12345
+Allocated: 100 MiB; touching one byte per 4096-byte page.
+Inspect with: ps -o pid,vsz,rss,stat,comm -p 12345
+Finished touching pages. Press Enter to exit.
+
+Terminal 2 (PID will differ):
+$ ps -o pid,vsz,rss,stat,comm -p 12345
+  PID    VSZ   RSS STAT COMMAND
+12345 102xxx 10xxxx S+  memory
+
+Values vary by OS and system. RSS generally rises as pages are touched; virtual size and RSS are not expected to match exactly.
