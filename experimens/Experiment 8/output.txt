@@ -1,0 +1,40 @@
+CPU-bound PID: 793
+I/O-bound PID: 794
+
+--- CPU-bound process memory map (pmap -x) ---
+793:   ./cpu_bound
+Address           Kbytes     RSS   Dirty Mode  Mapping
+00005648589c7000       4       4       4 r---- cpu_bound
+00005648589c8000       4       4       4 r-x-- cpu_bound
+00005648589c9000       4       0       0 r---- cpu_bound
+00005648589ca000       4       4       4 r---- cpu_bound
+00005648589cb000       4       4       4 rw--- cpu_bound
+00007fb85dd1f000      12       8       8 rw---   [ anon ]
+00007fb85dd22000     160     140       0 r---- libc.so.6
+00007fb85dd4a000    1420     100       0 r-x-- libc.so.6
+00007fb85dead000     344       4       0 r---- libc.so.6
+00007fb85df03000      16      16      16 r---- libc.so.6
+
+--- I/O-bound process memory map (pmap -x) ---
+794:   ./io_bound
+Address           Kbytes     RSS   Dirty Mode  Mapping
+000055a68c8bd000       4       4       4 r---- io_bound
+000055a68c8be000       4       4       4 r-x-- io_bound
+000055a68c8bf000       4       4       4 r---- io_bound
+000055a68c8c0000       4       4       4 r---- io_bound
+000055a68c8c1000       4       4       4 rw--- io_bound
+000055a6bd0b0000     132       8       8 rw---   [ anon ]
+00007f09d4895000      12       8       8 rw---   [ anon ]
+00007f09d4898000     160     140       0 r---- libc.so.6
+00007f09d48c0000    1420     184       0 r-x-- libc.so.6
+00007f09d4a23000     344      12       0 r---- libc.so.6
+
+--- /proc maps sample ---
+5648589c7000-5648589c8000 r--p 00000000 00:1b 786629                     /tmp/os_test/cpu_bound
+5648589c8000-5648589c9000 r-xp 00001000 00:1b 786629                     /tmp/os_test/cpu_bound
+5648589c9000-5648589ca000 r--p 00002000 00:1b 786629                     /tmp/os_test/cpu_bound
+5648589ca000-5648589cb000 r--p 00002000 00:1b 786629                     /tmp/os_test/cpu_bound
+5648589cb000-5648589cc000 rw-p 00003000 00:1b 786629                     /tmp/os_test/cpu_bound
+7fb85dd1f000-7fb85dd22000 rw-p 00000000 00:00 0 
+7fb85dd22000-7fb85dd4a000 r--p 00000000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fb85dd4a000-7fb85dead000 r-xp 00028000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
